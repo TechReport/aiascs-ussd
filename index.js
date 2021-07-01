@@ -14,7 +14,7 @@ app.post('/ussd', (req, res) => {
         phoneNumber,
         text,
     } = req.body;
-
+console.log(" africastalking "+ req.body)
     let response = '';
 
     if (text == '') {
