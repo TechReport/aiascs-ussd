@@ -6,7 +6,7 @@ const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-app.post('/ussd', (req, res) => {
+app.get('/ussd', (req, res) => {
     // Read the variables sent via POST from our API
     const {
         sessionId,
