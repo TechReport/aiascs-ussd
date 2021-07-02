@@ -34,7 +34,7 @@ app.post('/ussd', (req, res) => {
         response = `CON Ingiza mrejesho wako hapa chini `;
     
     }
-    else {
+    else if(text.length == 12 && text != null ){
         
         // This is a terminal request. Note how we start the response with END
         // console.log("2. MREJESHO WENYEWE UNASEMA HIVI "+ text);
