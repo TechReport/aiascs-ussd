@@ -33,13 +33,14 @@ app.post('/ussd', (req, res) => {
     
     }
     else {
-        if(text.length == 10){
-            response = `END Asante na karibu tena, tunakutakia majukumu mema katika uzalishaji wa chakula`;
-            console.log("tumepata lenght ya number ya simu")
-        }
+        // if( == 10){
+        //     response = `END Asante na karibu tena, tunakutakia majukumu mema katika uzalishaji wa chakula`;
+        //     console.log("tumepata lenght ya number ya simu")
+        // }
         // This is a terminal request. Note how we start the response with END
         response = `END Asante na karibu tena, tunakutakia majukumu mema katika uzalishaji wa chakula`;
         console.log("2. MREJESHO WENYEWE UNASEMA HIVI "+ text);
+        console.log(" lenghth is "+ text.length);
 
     }
 
