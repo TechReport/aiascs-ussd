@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const http = require('http');
+const toAIASCS = require('./controlers');
 
 const app = express();
 app.use(bodyParser.json());
@@ -36,8 +37,8 @@ app.post('/ussd', (req, res) => {
     
     }
     else {
-               
-        response = `END Asante na karibu tena, tunakutakia majukumu mema katika uzalishaji wa chakula`;
+      
+        response = `END Asante na karibu tena,` + toAIASCS(data) +` tunakutakia majukumu mema katika uzalishaji wa chakula`;
         // text == '1*2'
      }
 
