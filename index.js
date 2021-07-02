@@ -33,7 +33,7 @@ app.post('/ussd', (req, res) => {
     
     }
     else {
-        if(text.length == 10){
+        if(text.length == 12){
             response = `END Asante na karibu tena, tumechukua namba yako`;
             console.log("tumepata lenght ya number ya simu")
         }
