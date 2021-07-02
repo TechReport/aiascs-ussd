@@ -24,7 +24,7 @@ app.post('/ussd', (req, res) => {
         2. Kutoa Mrejesho 
         3. Toka
         `;
-        response = `CON Ingiza Number yako  simu mfano: 0712949471 `;
+        // response = `CON Ingiza Number yako  simu mfano: 0712949471 `;
     } else if ( text == '1') {
         // Business logic for first level response
         response = `CON Ingiza namba ya kuhakiki pembejeo hapa chini `;
@@ -35,7 +35,7 @@ app.post('/ussd', (req, res) => {
         response = `CON Ingiza mrejesho wako hapa chini `;
     
     }
-    else if( true){
+    else {
                
         response = `END Asante na karibu tena, tunakutakia majukumu mema katika uzalishaji wa chakula`;
         // text == '1*2'
