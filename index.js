@@ -27,6 +27,7 @@ app.post('/ussd', (req, res) => {
         response = `CON Chagua huduma unayohitaji kati ya huduma zetu zifuatazo
         1. Kuhakiki Pembejeo
         2. Kutoa Mrejesho `;
+        text = '';
         if( text == '1')
         {
             response = `CON Ingiza namba ya kuhakiki pembejeo hapa chini
