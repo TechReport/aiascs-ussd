@@ -29,6 +29,7 @@ app.post('/ussd', (req, res) => {
         
     }  else if( text == '2'){
         response = `CON Ingiza mrejesho wako hapa chini `;
+        console.log("1. MREJESHO WENYEWE UNASEMA HIVI "+ text);
     }
     
     
@@ -36,6 +37,8 @@ app.post('/ussd', (req, res) => {
 
         // This is a terminal request. Note how we start the response with END
         response = `END Asante na karibu tena, tunakutakia majukumu mema katika uzalishaji wa chakula`;
+        console.log("2. MREJESHO WENYEWE UNASEMA HIVI "+ text);
+
     }
 
     // Send the response back to the API
