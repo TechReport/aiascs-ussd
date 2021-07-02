@@ -31,7 +31,7 @@ app.post('/ussd', (req, res) => {
         response = `CON Ingiza mrejesho wako hapa chini `;
         console.log("1. MREJESHO WENYEWE UNASEMA HIVI "+ text);
     }
-    else if(text.length){
+    else if(text.length == 10){
         console.log("tumepata lenght ya number ya simu")
     }
     
