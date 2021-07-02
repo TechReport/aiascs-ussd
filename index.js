@@ -20,8 +20,8 @@ app.post('/ussd', (req, res) => {
     if (text == '') {
         // This is the first request. Note how we start the response with CON
         response = `CON Karibu Katika mfumo wa AIASCS ,chagua lugha ili kuendelea 
-        1. English
-        2. Kiswahili `;
+        1. Kiswahili
+        2. English `;
     } else if ( text == '1') {
         // Business logic for first level response
         response = `CON Chagua huduma unayohitaji kati ya huduma zetu zifuatazo
@@ -32,7 +32,11 @@ app.post('/ussd', (req, res) => {
             response = `CON Ingiza namba ya kuhakiki pembejeo hapa chini
             0. Namba Ni  `;
             // number hii hapa
-            console.log("user kaingiza hapa "+ text);
+        }
+        else if(text == '4')
+        {
+            response = `CON Ingiza mrejesho wako hapa chini `;
+          
         }
     } else if ( text == '2') {
         // Business logic for first level response
