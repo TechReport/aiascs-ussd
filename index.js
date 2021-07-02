@@ -19,13 +19,21 @@ app.post('/ussd', (req, res) => {
 
     if (text == '') {
         // This is the first request. Note how we start the response with CON
-        response = `CON What would you like to check
-        1. My account
-        2. My phone number`;
+        response = `CON Karibu Katika mfumo wa AIASCS ,chagua lugha ili kuendelea 
+        1. English
+        2. Kiswahili `;
     } else if ( text == '1') {
         // Business logic for first level response
-        response = `CON Choose account information you want to view
-        1. Account number`;
+        response = `CON Chagua huduma unayohitaji kati ya huduma zetu zifuatazo
+        1. Kuhakiki Pembejeo
+        2. Kutoa Mrejesho `;
+        if( text == '1')
+        {
+            response = `CON Ingiza namba ya kuhakiki pembejeo hapa chini
+            0. Namba Ni  `;
+            // number hii hapa
+            console.log("user kaingiza hapa "+ text);
+        }
     } else if ( text == '2') {
         // Business logic for first level response
         // This is a terminal request. Note how we start the response with END
