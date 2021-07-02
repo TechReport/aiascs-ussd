@@ -25,10 +25,9 @@ app.post('/ussd', (req, res) => {
     } else if ( text == '1') {
         // Business logic for first level response
         response = `CON Chagua huduma unayohitaji kati ya huduma zetu zifuatazo
-        1. Kuhakiki Pembejeo
-        2. Kutoa Mrejesho `;
-        text = '';
-        if( text == '1')
+        3. Kuhakiki Pembejeo
+        4. Kutoa Mrejesho `;
+        if( text == '3')
         {
             response = `CON Ingiza namba ya kuhakiki pembejeo hapa chini
             0. Namba Ni  `;
