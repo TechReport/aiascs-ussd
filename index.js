@@ -19,32 +19,27 @@ app.post('/ussd', (req, res) => {
 
     if (text == '') {
         // This is the first request. Note how we start the response with CON
-        response = `CON Ingiza Number yako  simu mfano: 0712949471 `;
-    } else if ( text == '1*1') {
-        // Business logic for first level response
-        response = `CON Ingiza namba ya kuhakiki pembejeo hapa chini `;
-        // number hii hapa
-        
-    }  else if( text == '1*2'){
-               
-       response = `END Asante na karibu tena, tunakutakia majukumu mema katika uzalishaji wa chakula`;
-    
-    }
-    else if( text == '1*3'){
-        response = `CON Ingiza mrejesho wako hapa chini `;
-    
-    }
-    else if(true){
-        console.log("in text value "+ text);
-        
-        // This is a terminal request. Note how we start the response with END
-        // console.log("2. MREJESHO WENYEWE UNASEMA HIVI "+ text);
         response = `CON Karibu Katika mfumo wa AIASCS ,Chagua Huduma Kuendelea
         1. Kuhakiki Pembejeo
         2. Kutoa Mrejesho 
         3. Toka
         `;
+        response = `CON Ingiza Number yako  simu mfano: 0712949471 `;
+    } else if ( text == '1') {
+        // Business logic for first level response
+        response = `CON Ingiza namba ya kuhakiki pembejeo hapa chini `;
+        // number hii hapa
+        
+    }  
+    else if( text == '2'){
+        response = `CON Ingiza mrejesho wako hapa chini `;
+    
     }
+    else if( true){
+               
+        response = `END Asante na karibu tena, tunakutakia majukumu mema katika uzalishaji wa chakula`;
+        // text == '1*2'
+     }
 
     // Send the response back to the API
     res.set('Content-Type: text/plain');
