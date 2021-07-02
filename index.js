@@ -37,6 +37,16 @@ app.post('/ussd', (req, res) => {
         response = `CON Karibu Katika mfumo wa AIASCS ,Chagua Huduma Kuendelea
         1. Kuhakiki Pembejeo
         2. Kutoa Mrejesho `;
+
+        if ( text == '1') {
+            // Business logic for first level response
+            response = `CON Ingiza namba ya kuhakiki pembejeo hapa chini `;
+            // number hii hapa
+            
+        }  else if( text == '2'){
+            response = `CON Ingiza mrejesho wako hapa chini `;
+        
+        }
     }
 
     // Send the response back to the API
