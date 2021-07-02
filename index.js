@@ -19,24 +19,20 @@ app.post('/ussd', (req, res) => {
 
     if (text == '') {
         // This is the first request. Note how we start the response with CON
-        response = `CON Karibu Katika mfumo wa AIASCS ,chagua lugha ili kuendelea 
-        1. Kiswahili`;
+        response = `CON Karibu Katika mfumo wa AIASCS ,Chagua Huduma Kuendelea
+        1. Kuhakiki Pembejeo
+        2. Kutoa Mrejesho `;
     } else if ( text == '1') {
         // Business logic for first level response
-        response = `CON Chagua huduma unayohitaji kati ya huduma zetu zifuatazo
-        3. Kuhakiki Pembejeo
-        4. Kutoa Mrejesho `;
-        if( text == '3')
-        {
-            response = `CON Ingiza namba ya kuhakiki pembejeo hapa chini `;
-            // number hii hapa
-        }
-        else if(text == '4')
-        {
-            response = `CON Ingiza mrejesho wako hapa chini `;
-          
-        }
-    }  else{
+        response = `CON Ingiza namba ya kuhakiki pembejeo hapa chini `;
+        // number hii hapa
+        
+    }  else if( text == '2'){
+        response = `CON Ingiza mrejesho wako hapa chini `;
+    }
+    
+    
+    else {
 
         // This is a terminal request. Note how we start the response with END
         response = `END Asante na karibu tena, tunakutakia majukumu mema katika uzalishaji wa chakula`;
