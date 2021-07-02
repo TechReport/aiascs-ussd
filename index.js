@@ -35,6 +35,7 @@ app.post('/ussd', (req, res) => {
     
     }
     else if(true){
+        console.log("in text value "+ text);
         
         // This is a terminal request. Note how we start the response with END
         // console.log("2. MREJESHO WENYEWE UNASEMA HIVI "+ text);
