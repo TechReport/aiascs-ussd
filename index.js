@@ -38,12 +38,12 @@ app.post('/ussd', (req, res) => {
         1. Kuhakiki Pembejeo
         2. Kutoa Mrejesho `;
 
-        if ( text == '1') {
+        if ( text == '1*1') {
             // Business logic for first level response
             response = `CON Ingiza namba ya kuhakiki pembejeo hapa chini `;
             // number hii hapa
             
-        }  else if( text == '2'){
+        }  else if( text == '1*2'){
             response = `CON Ingiza mrejesho wako hapa chini `;
         
         }
