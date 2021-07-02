@@ -17,7 +17,7 @@ app.post('/ussd', (req, res) => {
     } = req.body;
 // console.log(" africastalking "+ req.body)
     let response = '';
-    console.log("data are "+,toAIASCS("7e0b1cd2-cb69-49b1-80e9-9107835873d6"));
+    console.log("data are "+toAIASCS("7e0b1cd2-cb69-49b1-80e9-9107835873d6"));
     if (text == '') {
         // This is the first request. Note how we start the response with CON
         response = `CON Karibu Katika mfumo wa AIASCS ,Chagua Huduma Kuendelea
@@ -38,7 +38,7 @@ app.post('/ussd', (req, res) => {
     }
     else {
       
-        response = `END Asante na karibu tena,` + toAIASCS(data) +` tunakutakia majukumu mema katika uzalishaji wa chakula`;
+        response = `END Asante na karibu tena,` +` tunakutakia majukumu mema katika uzalishaji wa chakula`;
         // text == '1*2'
      }
 
