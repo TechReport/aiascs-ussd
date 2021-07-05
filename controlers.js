@@ -14,15 +14,17 @@ async function toAIASCS(data){
         fromID: '0620419226'
       })
       .then(function (response) {
-        client.messages.create({
-          to: '+255762434508',
-          from:"+1 832 734 9551",
-          body:response.data['message']
-          }).then((messages)=>{
-              console.log(messages.sid);
-              console.log(messages);
+        console.log(JSON.parse(response.data)['message']);
+        console.log(JSON.parse(response.data)['fromID']);
+        // client.messages.create({
+        //   to: '+255762434508',
+        //   from:"+1 832 734 9551",
+        //   body:response.data['message']
+        //   }).then((messages)=>{
+        //       console.log(messages.sid);
+        //       console.log(messages);
           
-          })
+        //   })
       })
       .catch(function (error) {
         console.log(error);
