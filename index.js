@@ -30,7 +30,6 @@ app.post('/ussd',async (req, res) => {
         // Business logic for first level response
         response = `CON Ingiza namba ya kuhakiki pembejeo hapa chini `;
         // number hii hapa
-        console.log("in option1 ");
     }  
     else if( text == '2'){
         response = `CON Ingiza mrejesho wako hapa chini `;
