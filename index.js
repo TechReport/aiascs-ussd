@@ -17,7 +17,7 @@ app.post('/ussd', (req, res) => {
     } = req.body;
 // console.log(" africastalking "+ req.body)
     let response = '';
-    console.log("data are "+toAIASCS("7e0b1cd2-cb69-49b1-80e9-9107835873d6"));
+    console.log("data are "+toAIASCS("21undefined-00-002P"));
     if (text == '') {
         // This is the first request. Note how we start the response with CON
         response = `CON Karibu Katika mfumo wa AIASCS ,Chagua Huduma Kuendelea
