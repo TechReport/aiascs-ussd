@@ -8,7 +8,7 @@ async function toAIASCS(data){
         fromID: '0620419226'
       })
       .then(function (response) {
-        console.log(response);
+        console.log(response.data);
       })
       .catch(function (error) {
         console.log(error);
