@@ -17,7 +17,7 @@ app.post('/ussd',async (req, res) => {
     } = req.body;
 // console.log(" africastalking "+ req.body)
     let response = '';
-    console.log("data are  "+await toAIASCS("21undefined-00-002P"));
+  
     if (text == '') {
         // This is the first request. Note how we start the response with CON
         response = `CON Karibu Katika mfumo wa AIASCS ,Chagua Huduma Kuendelea
@@ -39,7 +39,7 @@ app.post('/ussd',async (req, res) => {
     else {
         console.log("in mwisho ");
 
-        response = `END Asante na karibu tena,` +` tunakutakia majukumu mema katika uzalishaji wa chakula`;
+        response = `END `+ await toAIASCS("21undefined-00-002P") +   `Asante na karibu tena,` +` tunakutakia majukumu mema katika uzalishaji wa chakula`;
         // text == '1*2'
      }
 
