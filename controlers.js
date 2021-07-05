@@ -15,6 +15,7 @@ async function toAIASCS(data){
       })
       .then(function (response) {
         console.log((response.data)['message']);
+        console.log((response.data)['from']);
         // console.log(response.data['fromID']);
         // client.messages.create({
         //   to: '+255762434508',
