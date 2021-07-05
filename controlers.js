@@ -15,7 +15,7 @@ async function toAIASCS(data){
       });
 
 
-      if(data.length > 17){
+      if(data.length > 25){
 return "";
       }else{
         return (response.data)['message'];
