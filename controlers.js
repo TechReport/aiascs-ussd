@@ -20,10 +20,10 @@ return "";
       }else{
         if (((response.data)['message']).length <29)
         {
-        return (response.data)['message'];
+        return (response.data)['message'].toUpperCase();
         }
         else {
-          return (response.data)['message'].toUpperCase();
+          return (response.data)['message'];
         }
       }
       // .then(function (response) {
