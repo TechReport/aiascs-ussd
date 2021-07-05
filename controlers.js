@@ -3,7 +3,7 @@ const axios = require('axios').default;
 
 
 async function toAIASCS(data){
-    await axios.post('/user', {
+    await axios.post('https://secret-ridge-42311.herokuapp.com/api/v1/feedback/verify', {
         message: data,
         fromID: '0620419226'
       })
