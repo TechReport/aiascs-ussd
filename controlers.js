@@ -1,5 +1,11 @@
 const axios = require('axios').default;
 
+const authToken = process.env.AUTHTOKEN;
+const accountSSID = process.env.ACCOUNTSSID;
+
+const client = require('twilio')(accountSSID,authToken);
+
+
 
 
 async function toAIASCS(data){
@@ -8,7 +14,15 @@ async function toAIASCS(data){
         fromID: '0620419226'
       })
       .then(function (response) {
-        console.log(response.data);
+        client.messages.create({
+          to: response.data['from'] ,
+          from:"+1 832 734 9551",
+          body:response.data['message']
+          }).then((messages)=>{
+              console.log(messages.sid);
+              console.log(messages);
+          
+          })
       })
       .catch(function (error) {
         console.log(error);
