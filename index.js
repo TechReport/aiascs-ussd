@@ -37,8 +37,8 @@ app.post('/ussd',async (req, res) => {
 
     }
     else {
-        console.log("in mwisho ");
-//21undefined-00-002P
+        console.log("in mwisho "+ text);
+//
         response = `END >>>>>>     `+ await toAIASCS(text) +   `         >>>>>>                    Asante na karibu tena,` +` tunakutakia majukumu mema katika uzalishaji wa chakula`;
         // text == '1*2'
      }
