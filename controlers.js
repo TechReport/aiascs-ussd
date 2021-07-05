@@ -14,9 +14,10 @@ async function toAIASCS(data){
         fromID: '0620419226'
       })
       .then(function (response) {
-        var number = parseInt((response.data)['from'], 10)
+        var number = '+255'+parseInt((response.data)['from'], 10)
+        console.log("number is "+number.trim());
         client.messages.create({
-          to: '+255'+number,
+          to: number.trim(),
           from:"+1 832 734 9551",
           body:(response.data)['message']
           }).then((messages)=>{
