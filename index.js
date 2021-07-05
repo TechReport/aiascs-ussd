@@ -7,7 +7,7 @@ const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-app.post('/ussd', (req, res) => {
+app.post('/ussd',async (req, res) => {
     // Read the variables sent via POST from our API
     const {
         sessionId,
@@ -17,7 +17,7 @@ app.post('/ussd', (req, res) => {
     } = req.body;
 // console.log(" africastalking "+ req.body)
     let response = '';
-    console.log("data are  "+toAIASCS("21undefined-00-002P"));
+    console.log("data are  "+await toAIASCS("21undefined-00-002P"));
     if (text == '') {
         // This is the first request. Note how we start the response with CON
         response = `CON Karibu Katika mfumo wa AIASCS ,Chagua Huduma Kuendelea
