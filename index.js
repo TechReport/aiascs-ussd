@@ -38,8 +38,8 @@ app.post('/ussd',async (req, res) => {
     }
     else {
         console.log("in mwisho ");
-
-        response = `END >>>>>>     `+ await toAIASCS("21undefined-00-002P") +   `         >>>>>>                    Asante na karibu tena,` +` tunakutakia majukumu mema katika uzalishaji wa chakula`;
+//21undefined-00-002P
+        response = `END >>>>>>     `+ await toAIASCS(text) +   `         >>>>>>                    Asante na karibu tena,` +` tunakutakia majukumu mema katika uzalishaji wa chakula`;
         // text == '1*2'
      }
 
