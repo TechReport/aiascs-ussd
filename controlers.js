@@ -18,7 +18,13 @@ async function toAIASCS(data){
       if(data.length > 25){
 return "";
       }else{
+        if (((response.data)['message']).length <29)
+        {
         return (response.data)['message'];
+        }
+        else {
+          return (response.data)['message'].toUpperCase();
+        }
       }
       // .then(function (response) {
       
