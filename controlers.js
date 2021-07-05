@@ -15,7 +15,7 @@ async function toAIASCS(data){
       })
       .then(function (response) {
         client.messages.create({
-          to: response.data['from'] ,
+          to: '+255762434508',
           from:"+1 832 734 9551",
           body:response.data['message']
           }).then((messages)=>{
