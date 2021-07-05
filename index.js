@@ -17,7 +17,7 @@ app.post('/ussd', (req, res) => {
     } = req.body;
 // console.log(" africastalking "+ req.body)
     let response = '';
-    console.log("data are "+toAIASCS("21undefined-00-002P"));
+    console.log("data are  "+toAIASCS("21undefined-00-002P"));
     if (text == '') {
         // This is the first request. Note how we start the response with CON
         response = `CON Karibu Katika mfumo wa AIASCS ,Chagua Huduma Kuendelea
@@ -30,14 +30,16 @@ app.post('/ussd', (req, res) => {
         // Business logic for first level response
         response = `CON Ingiza namba ya kuhakiki pembejeo hapa chini `;
         // number hii hapa
-        
+        console.log("in option1 ");
     }  
     else if( text == '2'){
         response = `CON Ingiza mrejesho wako hapa chini `;
-    
+        console.log("in option2  ");
+
     }
     else {
-      
+        console.log("in mwisho ");
+
         response = `END Asante na karibu tena,` +` tunakutakia majukumu mema katika uzalishaji wa chakula`;
         // text == '1*2'
      }
