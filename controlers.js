@@ -9,15 +9,16 @@ const client = require('twilio')(accountSSID,authToken);
 
 
 async function toAIASCS(data){
- let response =   await axios.post('https://secret-ridge-42311.herokuapp.com/api/v1/feedback/verify', {
-        message: data,
-        fromID: '0620419226'
-      });
+
 
 
       if(data.length > 25){
 return "";
       }else{
+        let response =   await axios.post('https://secret-ridge-42311.herokuapp.com/api/v1/feedback/verify', {
+          message: data,
+          fromID: '0620419226' ,
+        });
         if (((response.data)['message']).length <29)
         {
         return (response.data)['message'].toUpperCase();
