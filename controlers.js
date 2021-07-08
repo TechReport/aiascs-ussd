@@ -12,7 +12,7 @@ async function toAIASCS(data){
 
 
 
-      if(data.length > 25){
+      if(data.length > 13){
 return "";
       }else{
         let response =   await axios.post('https://secret-ridge-42311.herokuapp.com/api/v1/feedback/verify', {
