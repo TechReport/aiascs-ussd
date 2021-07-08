@@ -23,7 +23,7 @@ app.post('/ussd',async (req, res) => {
         response = `CON Karibu Katika mfumo wa AIASCS ,Chagua Huduma Kuendelea
         1. Kuhakiki Pembejeo
         2. Kutoa Mrejesho 
-        3. Toka
+       // 3. Toka
         `;
         // response = `CON Ingiza Number yako  simu mfano: 0712949471 `;
     } else if ( text == '1') {
